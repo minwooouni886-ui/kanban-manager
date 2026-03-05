@@ -1,0 +1,306 @@
+/* Layout */
+.page {
+  height: 100vh;
+  width: 100vw;
+  padding: 28px;
+  background:
+    radial-gradient(900px 500px at 20% 10%, rgba(140, 92, 255, 0.25), transparent 60%),
+    radial-gradient(900px 500px at 80% 10%, rgba(0, 209, 255, 0.22), transparent 55%),
+    radial-gradient(900px 500px at 50% 90%, rgba(255, 84, 144, 0.18), transparent 60%),
+    #0b0f19;
+  color: #eaf0ff;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  max-width: 1100px;
+  margin: 0 auto 18px auto;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.logoBlob {
+  width: 44px;
+  height: 44px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #8c5cff, #00d1ff, #ff5490);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+.title {
+  margin: 0;
+  font-size: 32px;
+  line-height: 1.1;
+  letter-spacing: 0.2px;
+}
+
+.subtitle {
+  margin: 6px 0 0 0;
+  color: rgba(234, 240, 255, 0.75);
+  font-size: 14px;
+}
+
+/* States */
+.stateText {
+  max-width: 1100px;
+  margin: 24px auto;
+  color: rgba(234, 240, 255, 0.85);
+}
+
+.errorBanner {
+  max-width: 1100px;
+  margin: 0 auto 16px auto;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: rgba(255, 60, 110, 0.13);
+  border: 1px solid rgba(255, 60, 110, 0.35);
+  color: #ffd1de;
+}
+
+/* Buttons */
+.primaryButton,
+.secondaryButton,
+.ghostButton,
+.dangerButton,
+.iconButton,
+.chip {
+  font: inherit;
+  border: 0;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.primaryButton {
+  padding: 10px 14px;
+  color: #0b0f19;
+  background: linear-gradient(135deg, #8c5cff, #00d1ff, #ff5490);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+}
+
+.secondaryButton {
+  padding: 10px 14px;
+  color: #eaf0ff;
+  background: rgba(234, 240, 255, 0.12);
+  border: 1px solid rgba(234, 240, 255, 0.18);
+}
+
+.ghostButton {
+  padding: 10px 14px;
+  color: rgba(234, 240, 255, 0.9);
+  background: transparent;
+  border: 1px solid rgba(234, 240, 255, 0.18);
+}
+
+.dangerButton {
+  padding: 10px 14px;
+  color: #0b0f19;
+  background: linear-gradient(135deg, #ff3c6e, #ff9a3c);
+}
+
+.iconButton {
+  width: 38px;
+  height: 38px;
+  display: inline-grid;
+  place-items: center;
+  color: rgba(234, 240, 255, 0.9);
+  background: rgba(234, 240, 255, 0.10);
+  border: 1px solid rgba(234, 240, 255, 0.16);
+}
+
+.primaryButton:hover,
+.secondaryButton:hover,
+.ghostButton:hover,
+.dangerButton:hover,
+.iconButton:hover {
+  filter: brightness(1.05);
+}
+
+/* Grid + Cards */
+.grid {
+  max-width: 1100px;
+  margin: 16px auto 0 auto;
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}
+
+.boardCard {
+  overflow: hidden;
+  border-radius: 18px;
+  background: rgba(234, 240, 255, 0.08);
+  border: 1px solid rgba(234, 240, 255, 0.14);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35);
+}
+
+.coverWrap {
+  position: relative;
+  height: 140px;
+}
+
+.coverImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.coverOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(11, 15, 25, 0.10),
+    rgba(11, 15, 25, 0.65)
+  );
+}
+
+.cardActions {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 8px;
+}
+
+.chip {
+  padding: 7px 10px;
+  color: rgba(234, 240, 255, 0.95);
+  background: rgba(11, 15, 25, 0.55);
+  border: 1px solid rgba(234, 240, 255, 0.12);
+  backdrop-filter: blur(6px);
+}
+
+.chip.danger {
+  border-color: rgba(255, 60, 110, 0.35);
+  color: #ffd1de;
+}
+
+.boardBody {
+  padding: 14px 14px 16px 14px;
+}
+
+.boardTitleRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.boardTitle {
+  margin: 0;
+  font-size: 18px;
+}
+
+.boardMeta {
+  margin: 8px 0 0 0;
+  font-size: 12px;
+  color: rgba(234, 240, 255, 0.65);
+}
+
+/* Empty state */
+.emptyState {
+  max-width: 1100px;
+  margin: 24px auto;
+}
+
+.emptyCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 18px;
+  border-radius: 18px;
+  background: rgba(234, 240, 255, 0.08);
+  border: 1px solid rgba(234, 240, 255, 0.14);
+}
+
+.emptyText {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+/* Modal */
+.modalBackdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: grid;
+  place-items: center;
+  z-index: 1000;
+}
+
+.modalCard {
+  width: 100%;
+  max-width: 520px;
+  border-radius: 18px;
+  background: rgba(16, 22, 38, 0.92);
+  border: 1px solid rgba(234, 240, 255, 0.16);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.55);
+  padding: 14px;
+}
+
+.modalHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 4px 4px 10px 4px;
+}
+
+.modalTitle {
+  margin: 0;
+  font-size: 18px;
+}
+
+.form {
+  display: grid;
+  gap: 12px;
+  padding: 4px;
+}
+
+.label {
+  display: grid;
+  gap: 8px;
+  color: rgba(234, 240, 255, 0.85);
+  font-size: 13px;
+}
+
+.input {
+  padding: 11px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(234, 240, 255, 0.16);
+  background: rgba(234, 240, 255, 0.08);
+  color: #eaf0ff;
+  outline: none;
+}
+
+.input:focus {
+  border-color: rgba(140, 92, 255, 0.55);
+  box-shadow: 0 0 0 4px rgba(140, 92, 255, 0.18);
+}
+
+.hint {
+  font-size: 12px;
+  color: rgba(234, 240, 255, 0.65);
+  padding: 0 4px;
+}
+
+.confirmText {
+  padding: 8px 6px 12px 6px;
+  color: rgba(234, 240, 255, 0.85);
+}
+
+.modalFooter {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 10px 4px 4px 4px;
+}
