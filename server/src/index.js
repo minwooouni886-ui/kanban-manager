@@ -1,11 +1,13 @@
 import express from "express";
-import cors from "cors";
+import cors from "cors"
 import "dotenv/config";
 import boardsRouter from "./routes/boards.js";
 
 const app = express();
 
 app.use(cors({ origin: process.env.CLIENT_ORIGIN || "http://localhost:5173" }));
+
+app.use(express.json())
 
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
